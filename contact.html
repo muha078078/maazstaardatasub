@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact MAAZSTAAR WORLD for data and airtime top-up.">
+<title>Contact | MAAZSTAAR WORLD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="./index.html"><img src="./logo.jpg" alt="MAAZSTAAR WORLD logo"><span>MAAZSTAAR <span>WORLD</span></span></a>
+<button class="menu" aria-label="Open menu">☰</button>
+<nav><a href="./index.html">Home</a><a href="./services.html">Services</a><a href="./services.html#prices">Prices</a><a class="active" href="./contact.html">Contact</a></nav>
+</div></header>
+
+<main>
+<section class="page-hero"><div class="container"><h1>Contact Us</h1><p>Send your data or airtime request to MAAZSTAAR WORLD.</p></div></section>
+<section><div class="container form-wrap">
+<div class="form-card">
+<h2>Send a Request</h2>
+<form id="requestForm">
+<label for="name">Your Name</label><input id="name" required placeholder="Enter your name">
+<label for="phone">Phone Number</label><input id="phone" type="tel" required placeholder="08012345678">
+<label for="network">Network</label>
+<select id="network" required><option value="">Choose network</option><option>MTN</option><option>Airtel</option></select>
+<label for="service">Service</label>
+<select id="service" required><option value="">Choose service</option><option>Data</option><option>Airtime Top Up</option></select>
+<label for="amount">Package / Amount</label><input id="amount" required placeholder="e.g. 1GB or ₦500 airtime">
+<label for="notes">Additional message</label><textarea id="notes" placeholder="Anything else?"></textarea>
+<button class="btn btn-primary" type="submit" style="border:0;margin-top:15px;cursor:pointer">Send on WhatsApp</button>
+</form>
+</div>
+
+<div class="info-card">
+<h2>MAAZSTAAR WORLD</h2>
+<p style="margin-top:10px">Data Selling & Airtime Top Up</p>
+<br>
+<p>📞 <strong>Phone:</strong><br><a href="tel:+2349134560026">+234 913 456 0026</a></p>
+<p style="margin-top:15px">💬 <strong>WhatsApp:</strong><br><a href="https://wa.me/2349134560026" target="_blank">Chat with us</a></p>
+<p style="margin-top:15px">📧 <strong>Email:</strong><br>MUHA078078@GMAIL.COM</p>
+<p style="margin-top:15px">📍 <strong>Location:</strong><br>Sokoto Cinema Area</p>
+<p style="margin-top:15px">📘 <strong>Facebook:</strong><br>Muhammad maz</p>
+<p style="margin-top:15px">🕐 <strong>Service:</strong> 24/7</p>
+</div>
+</div></section>
+</main>
+
+<footer><div class="container"><div class="footer-grid">
+<div><h3>MAAZSTAAR WORLD</h3><p>Data Selling • Airtime Top Up</p></div>
+<div><h3>Call / WhatsApp</h3><p>+234 913 456 0026</p></div>
+<div><h3>Location</h3><p>Sokoto Cinema Area</p></div>
+</div><div class="copyright">© 2026 MAAZSTAAR WORLD.</div></div></footer>
+
+<script src="./script.js"></script>
+<script>
+document.getElementById('requestForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ const phone=document.getElementById('phone').value;
+ const network=document.getElementById('network').value;
+ const service=document.getElementById('service').value;
+ const amount=document.getElementById('amount').value;
+ const notes=document.getElementById('notes').value;
+ const msg=`Hello MAAZSTAAR WORLD,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ANetwork: ${encodeURIComponent(network)}%0AService: ${encodeURIComponent(service)}%0APackage/Amount: ${encodeURIComponent(amount)}%0AMessage: ${encodeURIComponent(notes)}`;
+ window.open('https://wa.me/2349134560026?text='+msg,'_blank');
+});
+</script>
+</body></html>
